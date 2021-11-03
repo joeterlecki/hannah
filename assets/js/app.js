@@ -1,8 +1,6 @@
 function getString() {
   let userString = document.getElementById("userString").value;
-
   let palindromeString = reversedString(userString);
-
   let palindromeStatus = checkPalindrome(userString, palindromeString);
 
   displayPalindrome(palindromeStatus, palindromeString);
