@@ -1,5 +1,5 @@
 name: Deploy To S3 Static Site
-on: 
+on:
   push:
     branches:
       - 'master'
@@ -7,7 +7,7 @@ env:
   BUCKET_NAME: hannah.joeterlecki.io
   CF_DISTRO_ID: E1Y4BMJ2BJJLBP
 jobs:
-  deploy: 
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout ${{ github.repository }}
