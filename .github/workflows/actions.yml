@@ -5,7 +5,7 @@ on:
       - 'master'
 env:
   BUCKET_NAME: hannah.joeterlecki.io
-  CF_DISTRO_ID: E2VZZLSK1EXACO
+  CF_DISTRO_ID: E1Y4BMJ2BJJLBP
 jobs:
   deploy: 
     runs-on: ubuntu-latest
