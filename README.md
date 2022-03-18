@@ -15,3 +15,6 @@ By creating a visual project, I can demonstrate the ability to package a problem
 This application is hosted by AWS using CloudFront CDN and S3 for static files. By using AWS I can demonstrate my architecture knowledge and application deployments. In addition, the solution is cost-effective and free considering its utilization.
 
 <img src="./documentation/images/s3-archtiecture.png" width="800" height="450" />
+
+### CICD
+GitHub actions is used to implement CICD for automatically deploying changes to master. The files are pushed to the s3 bucket and the Cloud front distrobution is then invalidated to expire cached resources in the CDN to allow new changes to be reflected.
