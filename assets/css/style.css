@@ -2,20 +2,29 @@
   font-family: 'Archivo', sans-serif;
 }
 
+.py-icon {
+  color: #4B8BBE;
+}
+
 .js-icon {
   color: #f0db4f;
 }
 
-.html-icon {
-  color: #e34f26;
+.aws-icon {
+  color: #FF9900;
 }
 
 .bs-icon {
   color: #583E80;
 }
 
-.css-icon {
-  color: #2760E5;
+language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url {
+  color: #9a6e3a;
+  background: none;
 }
 
 code[class*="language-"],

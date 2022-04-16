@@ -24,217 +24,196 @@
     <link type="text/css" href="./assets/css/soft-design-system-pro.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./css/prism.css">
+    <link rel="stylesheet" href="./assets/css/prism.css">
 
 </head>
 
 <body>
-<!-- Navbar Light -->
+    <!-- Navbar Light -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white z-index-3 py-3">
-    <div class="container">
-        <a class="navbar-brand" href="./index.html" rel="tooltip" title="Place Holder" data-placement="bottom"
-           target="_blank">
-            <span class="brand-font">HANNAH: Discover Your Palindrome</span>
-        </a>
-        <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+    <nav class="navbar navbar-expand-lg navbar-light bg-white z-index-3 py-3">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html" rel="tooltip" title="Place Holder" data-placement="bottom"
+                target="_blank">
+                <span class="brand-font">HANNAH: Discover Your Palindrome</span>
+            </a>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
                 aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon mt-2">
-          <span class="navbar-toggler-bar bar1"></span>
-          <span class="navbar-toggler-bar bar2"></span>
-          <span class="navbar-toggler-bar bar3"></span>
-        </span>
-        </button>
-        <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
-            <ul class="navbar-nav navbar-nav-hover mx-auto">
-                <li class="nav-item mx-2">
-                    <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                       href="./index.html">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                       href="./app.html">
-                        The App
-                    </a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                       href="./code.html">
-                        The Code
-                    </a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                       href="https://github.com/joeterlecki/hannah" target="_blank">
-                        Git Repo
-                    </a>
-                </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-                       href="https://joeterlecki.io" target="_blank">
-                        About
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<section class="py-9">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <h3 class="text-gradient text-success mb-0 mt-2"><span class="brand-font">HANNAH</span></h3>
-                <h3>The Code</h3>
-                <p>The Javascript starts with the function <span class="text-success text-gradient">getString</span>
-                    which retrieves the user string input
-                    using <span class="text-success text-gradient">documnet.getElementById</span></p>
-                <p>Once the string is retrieved the code continues the palindrome process by reversing the string with
-                    the <span class="text-success text-gradient">reversedString</span> function.</p>
-                <p>After the string is reversed, the new string is evaluated against the original to check to see if
-                    they are equal with the <span class="text-success text-gradient">checkPalindrome</span> function</p>
-                <p>The results are then returned to the page with the <span class="text-success text-gradient">displayPalindrome</span>
-                    fucntion.</p>
-                <p>To reverse a string with the <span class="text-success text-gradient">reversedString</span> function
-                    we first must take the input string
-                    and loop through each character one at a time. While looping through we must build the new string
-                    for later evaluation. To complete this, an empty array is created as <span
-                            class="text-success text-gradient">newString</span>. The for loop begins by using the string
-                    method for returning the length of the original string. Since a string can be evaluated as an array
-                    we take the length of the string and -1 which allows then loop to start at the last character.
-                    As the loop progresses it will continue to subtract 1 from the length until the index value is
-                    greater than or equal to 0. While each iteration happens the present charater is appened to then
-                    array. Once complet the new string is returned.</span>
-                </p>
-                <p>After the new reversed string is built, the <span class="text-success text-gradient">newString</span>
-                    is then variable is evaluated against the
-                    original input. The boolean result is then returned.</p>
-                <p>After all the previous functions are complete, the final result of the revered string and the boolean
-                    value on the palindrome status are returned to the dom and displayed with <span
-                            class="text-success text-gradient">document.getElementById("message").innerHTML = ${finalString} A PALINDROME!`;</span>
-                    if the word is indeed a palindrome. If the word is not a palindrome then <span
-                            class="text-success text-gradient">document.getElementById("message").innerHTML = `${finalString} IS NOT A PALINDROME!`;</span>
-                    is returned.
-                </p>
+                <span class="navbar-toggler-icon mt-2">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
+                <ul class="navbar-nav navbar-nav-hover mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                            href="./index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                            href="./app.html">
+                            The App
+                        </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                            href="./code.html">
+                            The Code
+                        </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                            href="./architecture.html">
+                            The Architecture
+                        </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                            href="https://github.com/joeterlecki/hannah" target="_blank">
+                            Git Repo
+                        </a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                            href="https://joeterlecki.io" target="_blank">
+                            About
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-lg-7 mt-lg-0 mt-5 ps-lg-0 ps-0">
-                <div class="card d-flex justify-content-center p-4 shadow-lg">
-            <pre class="line-numbers"><code class="language-javascript">
-              function getString() {
-                let userString = document.getElementById("userString").value;
-                let palindromeString = reversedString(userString);
-                let palindromeStatus = checkPalindrome(userString, palindromeString);
-              
-                displayPalindrome(palindromeStatus, palindromeString);
-              
-              }
-              
-              function reversedString(userString) {
-                let newString = []
-              
-                for (let char = userString.length - 1; char >= 0; char--) {
-                  newString += userString[char];
-                }
-              
-                return newString;
-              
-              }
-              
-              function checkPalindrome(userString, reversedString) {
-                let palindromeStatus = true;
-              
-                if (userString === reversedString) {
-                  return palindromeStatus;
-                } else {
-                  palindromeStatus = false;
-                  return palindromeStatus;
-                }
-              }
-              
-              function displayPalindrome(palindromeStatus, finalString) {
-                if (palindromeStatus == true) {
-                  document.getElementById("message").innerHTML = `<p>${finalString} IS A PALINDROME!</p>`;
-                } else {
-                  document.getElementById("message").innerHTML = `<p>${finalString} IS NOT A PALINDROME!</p>`;
-                }
-              }
-            </code></pre>
+        </div>
+    </nav>
+    <section class="py-9">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <h3 class="text-gradient text-success mb-0 mt-2"><span class="brand-font">HANNAH</span></h3>
+                    <h3>The Code</h3>
+                    <p>The Javascript starts with the function <span class="text-success text-gradient">getString</span>
+                        which retrieves the user string input
+                        using <span class="text-success text-gradient">documnet.getElementById</span></p>
+                    <p>Once the string is retrieved the code continues the palindrome process by reversing the string
+                        with
+                        the <span class="text-success text-gradient">reversedString</span> function.</p>
+                    <p>After the string is reversed, the new string is evaluated against the original to check to see if
+                        they are equal with the <span class="text-success text-gradient">checkPalindrome</span> function
+                    </p>
+                    <p>The results are then returned to the page with the <span
+                            class="text-success text-gradient">displayPalindrome</span>
+                        fucntion.</p>
+                    <p>To reverse a string with the <span class="text-success text-gradient">reversedString</span>
+                        function
+                        we first must take the input string
+                        and loop through each character one at a time. While looping through we must build the new
+                        string
+                        for later evaluation. To complete this, an empty array is created as <span
+                            class="text-success text-gradient">newString</span>. The for loop begins by using the string
+                        method for returning the length of the original string. Since a string can be evaluated as an
+                        array
+                        we take the length of the string and -1 which allows then loop to start at the last character.
+                        As the loop progresses it will continue to subtract 1 from the length until the index value is
+                        greater than or equal to 0. While each iteration happens the present charater is appened to then
+                        array. Once complet the new string is returned.</span>
+                    </p>
+                    <p>After the new reversed string is built, the <span
+                            class="text-success text-gradient">newString</span>
+                        is then variable is evaluated against the
+                        original input. The boolean result is then returned.</p>
+                    <p>After all the previous functions are complete, the final result of the revered string and the
+                        boolean
+                        value on the palindrome status are returned to the dom and displayed with <span
+                            class="text-success text-gradient">document.getElementById("message").innerHTML =
+                            ${finalString} A PALINDROME!`;</span>
+                        if the word is indeed a palindrome. If the word is not a palindrome then <span
+                            class="text-success text-gradient">document.getElementById("message").innerHTML =
+                            `${finalString} IS NOT A PALINDROME!`;</span>
+                        is returned.
+                    </p>
+                </div>
+                <div class="col-lg-7 mt-lg-0 mt-5 ps-lg-0 ps-0">
+                    <div class="card d-flex justify-content-center p-4 shadow-lg">
+                        <pre class="line-numbers"><code class="language-python">
+
+                        </code></pre>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-</section>
-<footer class="footer py-10">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mb-4 mx-auto text-center">
-                <a href="https://joeterlecki.io#about-me" target="_blank"
-                   class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    About Me
-                </a>
-                <a href="https://joeterlecki.io#about-me#skills" target="_blank"
-                   class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Skills
-                </a>
-                <a href="https://joeterlecki.io#about-me#projects" target="_blank"
-                   class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Projects
-                </a>
-                <a href="https://joeterlecki.io#about-me#coding-challanges" target="_blank"
-                   class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Coding Challenges
-                </a>
-                <a href="javascript:;" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
-                    Blog
-                </a>
+        </div>
+    </section>
+    <footer class="footer py-10">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-4 mx-auto text-center">
+                    <a href="https://joeterlecki.io#about-me" target="_blank"
+                        class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
+                        About Me
+                    </a>
+                    <a href="https://joeterlecki.io#about-me#skills" target="_blank"
+                        class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
+                        Skills
+                    </a>
+                    <a href="https://joeterlecki.io#about-me#projects" target="_blank"
+                        class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
+                        Projects
+                    </a>
+                    <a href="https://joeterlecki.io#about-me#coding-challanges" target="_blank"
+                        class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
+                        Coding Challenges
+                    </a>
+                    <a href="#" target="_blank" class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2">
+                        Blog
+                    </a>
+                </div>
+                <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
+                    <a href="https://www.youtube.com/c/JoeTerlecki" target="_blank" class="text-secondary me-xl-4 me-4">
+                        <span class="text-lg fab fa-youtube"></span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/joseph-terlecki/" target="_blank"
+                        class="text-secondary me-xl-4 me-4">
+                        <span class="text-lg fab fa-linkedin"></span>
+                    </a>
+                    <a href="https://github.com/joeterlecki" target="_blank" class="text-secondary me-xl-4 me-4">
+                        <span class="text-lg fab fa-github"></span>
+                    </a>
+                    <a href="https://twitter.com/cloud_custodian" target="_blank" class="text-secondary me-xl-4 me-4">
+                        <span class="text-lg fab fa-twitter"></span>
+                    </a>
+                </div>
             </div>
-            <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
-                <a href="https://www.youtube.com/c/JoeTerlecki" target="_blank" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-youtube"></span>
-                </a>
-                <a href="https://www.linkedin.com/in/joseph-terlecki/" target="_blank"
-                   class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-linkedin"></span>
-                </a>
-                <a href="https://github.com/joeterlecki" target="_blank" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-github"></span>
-                </a>
-                <a href="https://twitter.com/cloud_custodian" target="_blank" class="text-secondary me-xl-4 me-4">
-                    <span class="text-lg fab fa-twitter"></span>
-                </a>
+            <div class="row">
+                <div class="col-8 mx-auto text-center mt-1">
+                    <p class="mb-0 text-secondary">
+                        Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>
+                        Joe Terlecki.
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-8 mx-auto text-center mt-1">
-                <p class="mb-0 text-secondary">
-                    Copyright ©
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>
-                    Joe Terlecki.
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
-<!--   Core JS Files   -->
-<script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
-<script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-<script src="./assets/js/plugins/moment.min.js"></script>
+    <!--   Core JS Files   -->
+    <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./assets/js/plugins/moment.min.js"></script>
 
-<script src="./assets/js/prism.js"></script>
-<script>
-    Prism.plugins.NormalizeWhitespace.setDefaults({
-        'remove-trailing': true,
-        'remove-indent': true,
-        'left-trim': true,
-        'right-trim': true
-    })
-</script>
+    <script src="./assets/js/prism.js"></script>
+    <script>
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'remove-trailing': true,
+            'remove-indent': true,
+            'left-trim': true,
+            'right-trim': false
+        })
+    </script>
 </body>
 
 </html>
