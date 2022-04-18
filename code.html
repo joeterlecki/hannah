@@ -138,7 +138,45 @@
                 <div class="col-lg-7 mt-lg-0 mt-5 ps-lg-0 ps-0">
                     <div class="card d-flex justify-content-center p-4 shadow-lg">
                         <pre class="line-numbers"><code class="language-python">
+                            import json
 
+
+                            def reverse_string(string):
+                                reversed_string_list = []
+                                for char in string[::-1]:
+                                    reversed_string_list.append(char)
+                            
+                                formatted_string = ''.join(reversed_string_list)
+                            
+                                return formatted_string
+                                
+                                
+                            def evaluate_palindrome(string, reversed_string):
+                                is_palindrome = True
+                                
+                                if string != reversed_string:
+                                    is_palindrome = False
+                                    return is_palindrome
+                                else:
+                                    return is_palindrome
+                            
+                            def lambda_handler(event, context):
+                                
+                                string = event['queryStringParameters']['request_string']
+                                reversed_string = reverse_string(string)
+                                is_palindrome = evaluate_palindrome(string, reversed_string)
+                                
+                                request_reponse = {}
+                                request_reponse['statusCode'] = 200
+                                request_reponse['headers'] = {}
+                                request_reponse['headers']['Content-Type'] = 'application/json'
+                                request_reponse['headers']['Access-Control-Allow-Origin'] = '*'
+                                request_reponse['body'] = json.dumps(
+                                    {'response': 
+                                        {'reversedString': reversed_string, 
+                                        'isPalindrome': is_palindrome}})
+                            
+                                return request_reponse
                         </code></pre>
                     </div>
                 </div>
