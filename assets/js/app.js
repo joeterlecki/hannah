@@ -12,18 +12,10 @@ function displayPalindrome(normalString) {
       return response.json();
     })
     .then((data) => {
-      if (data["response"] == true) {
+      if (data["response"]["isPalindrome"] == true) {
         document.getElementById("message").innerHTML = `<p>${data["response"]["reversedString"]} IS A PALINDROME!</p>`;
       } else {
         document.getElementById("message").innerHTML = `<p>${data["response"]["reversedString"]} IS NOT A PALINDROME!</p>`;
       }
-
     })
-
-
-  // if (palindromeStatus == true) {
-  //   document.getElementById("message").innerHTML = `<p>${finalString} IS A PALINDROME!</p>`;
-  // } else {
-  //   document.getElementById("message").innerHTML = `<p>${finalString} IS NOT A PALINDROME!</p>`;
-  // }
 }
