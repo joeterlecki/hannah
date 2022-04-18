@@ -18,7 +18,7 @@
   color: #583E80;
 }
 
-language-css .token.string,
+.language-css .token.string,
 .style .token.string,
 .token.entity,
 .token.operator,
