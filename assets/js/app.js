@@ -1,38 +1,29 @@
 function getString() {
   let userString = document.getElementById("userString").value;
-  let palindromeString = reversedString(userString);
-  let palindromeStatus = checkPalindrome(userString, palindromeString);
-
-  displayPalindrome(palindromeStatus, palindromeString);
+  displayPalindrome(userString);
 
 }
 
-function reversedString(userString) {
-  let newString = []
+function displayPalindrome(normalString) {
 
-  for (let char = userString.length - 1; char >= 0; char--) {
-    newString += userString[char];
-  }
+  const url = `https://api.joeterlecki.io/hannah?request_string=${normalString}`;
+  fetch(url)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      if (data["response"] == true) {
+        document.getElementById("message").innerHTML = `<p>${data["response"]["reversedString"]} IS A PALINDROME!</p>`;
+      } else {
+        document.getElementById("message").innerHTML = `<p>${data["response"]["reversedString"]} IS NOT A PALINDROME!</p>`;
+      }
 
-  return newString;
+    })
 
-}
 
-function checkPalindrome(userString, reversedString) {
-  let palindromeStatus = true;
-
-  if (userString === reversedString) {
-    return palindromeStatus;
-  } else {
-    palindromeStatus = false;
-    return palindromeStatus;
-  }
-}
-
-function displayPalindrome(palindromeStatus, finalString) {
-  if (palindromeStatus == true) {
-    document.getElementById("message").innerHTML = `<p>${finalString} IS A PALINDROME!</p>`;
-  } else {
-    document.getElementById("message").innerHTML = `<p>${finalString} IS NOT A PALINDROME!</p>`;
-  }
+  // if (palindromeStatus == true) {
+  //   document.getElementById("message").innerHTML = `<p>${finalString} IS A PALINDROME!</p>`;
+  // } else {
+  //   document.getElementById("message").innerHTML = `<p>${finalString} IS NOT A PALINDROME!</p>`;
+  // }
 }
