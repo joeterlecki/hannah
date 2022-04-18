@@ -94,46 +94,6 @@
                 <div class="col-lg-5">
                     <h3 class="text-gradient text-success mb-0 mt-2"><span class="brand-font">HANNAH</span></h3>
                     <h3>The Code</h3>
-                    <p>The Javascript starts with the function <span class="text-success text-gradient">getString</span>
-                        which retrieves the user string input
-                        using <span class="text-success text-gradient">documnet.getElementById</span></p>
-                    <p>Once the string is retrieved the code continues the palindrome process by reversing the string
-                        with
-                        the <span class="text-success text-gradient">reversedString</span> function.</p>
-                    <p>After the string is reversed, the new string is evaluated against the original to check to see if
-                        they are equal with the <span class="text-success text-gradient">checkPalindrome</span> function
-                    </p>
-                    <p>The results are then returned to the page with the <span
-                            class="text-success text-gradient">displayPalindrome</span>
-                        fucntion.</p>
-                    <p>To reverse a string with the <span class="text-success text-gradient">reversedString</span>
-                        function
-                        we first must take the input string
-                        and loop through each character one at a time. While looping through we must build the new
-                        string
-                        for later evaluation. To complete this, an empty array is created as <span
-                            class="text-success text-gradient">newString</span>. The for loop begins by using the string
-                        method for returning the length of the original string. Since a string can be evaluated as an
-                        array
-                        we take the length of the string and -1 which allows then loop to start at the last character.
-                        As the loop progresses it will continue to subtract 1 from the length until the index value is
-                        greater than or equal to 0. While each iteration happens the present charater is appened to then
-                        array. Once complet the new string is returned.</span>
-                    </p>
-                    <p>After the new reversed string is built, the <span
-                            class="text-success text-gradient">newString</span>
-                        is then variable is evaluated against the
-                        original input. The boolean result is then returned.</p>
-                    <p>After all the previous functions are complete, the final result of the revered string and the
-                        boolean
-                        value on the palindrome status are returned to the dom and displayed with <span
-                            class="text-success text-gradient">document.getElementById("message").innerHTML =
-                            ${finalString} A PALINDROME!`;</span>
-                        if the word is indeed a palindrome. If the word is not a palindrome then <span
-                            class="text-success text-gradient">document.getElementById("message").innerHTML =
-                            `${finalString} IS NOT A PALINDROME!`;</span>
-                        is returned.
-                    </p>
                 </div>
                 <div class="col-lg-7 mt-lg-0 mt-5 ps-lg-0 ps-0">
                     <div class="card d-flex justify-content-center p-4 shadow-lg">
